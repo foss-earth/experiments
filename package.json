@@ -1,0 +1,45 @@
+{
+  "name": "@foss-earth/experiments",
+  "private": true,
+  "version": "0.1.0",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "description": "The app you start for a FOSS Earth experiment. One dev server serves the page, the pictures, and the study files.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/foss-earth/experiments.git"
+  },
+  "scripts": {
+    "dev": "vite --configLoader native",
+    "typecheck": "tsc -p tsconfig.json --noEmit --tsBuildInfoFile node_modules/.tmp/typecheck.tsbuildinfo && tsc -p tsconfig.node.json --noEmit --tsBuildInfoFile node_modules/.tmp/typecheck.node.tsbuildinfo",
+    "test": "vitest run --configLoader native",
+    "lint": "eslint . --cache --cache-strategy content --cache-location node_modules/.cache/eslint/"
+  },
+  "dependencies": {
+    "@foss-earth/ui": "file:../ui",
+    "@foss-earth/renderer": "file:../renderer",
+    "@foss-earth/engine": "file:../engine",
+    "@foss-earth/images": "file:../images",
+    "@foss-earth/rectangle-image": "file:../rectangle-image",
+    "@foss-earth/sphere-image": "file:../sphere-image",
+    "@felipegalind0/gamepad-tools": "file:../../Felipegalind0/gamepad-tools",
+    "@babylonjs/core": "8.56.2",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.4",
+    "@types/node": "24.12.4",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "eslint": "9.39.4",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.2",
+    "globals": "17.6.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.59.3",
+    "vite": "8.3.4",
+    "vitest": "4.1.6"
+  }
+}
