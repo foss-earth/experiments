@@ -63,6 +63,7 @@ export async function createExperimentHost(canvas: HTMLCanvasElement): Promise<{
       return () => { scene.onBeforeRenderObservable.remove(observer); };
     },
     requestRender, nowMs: () => performance.now(), inputMode: () => "auto", safariGestures: false,
+    forwardUnusedInput: true,
     onDeviceLost: listener => {
       const observer = engine.onContextLostObservable.add(listener);
       return () => { engine.onContextLostObservable.remove(observer); };

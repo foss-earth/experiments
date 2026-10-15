@@ -41,6 +41,8 @@ html, body, #root {
   position: absolute;
   inset: 0;
   z-index: 2;
+  /* Windows and the wipe handle opt back in. The rest of the screen is the picture. */
+  pointer-events: none;
 }
 
 .experiment-hud {

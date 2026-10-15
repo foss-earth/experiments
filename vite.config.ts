@@ -23,7 +23,6 @@ export default defineConfig({
   },
   ssr: { resolve: { conditions: ["source", ...defaultServerConditions] } },
   server: {
-    host: "127.0.0.1",
     headers: isolation,
     watch: { ignored: ["**/build/**"] },
   },
