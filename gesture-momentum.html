@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gesture momentum</title>
+    <style>
+      body { margin: 24px; background: #141414; color: #f2f2f2; font: 16px/1.45 system-ui, sans-serif; }
+      #pad { height: 50vh; margin: 16px 0; border: 1px solid #555; touch-action: none; }
+      pre { white-space: pre-wrap; }
+    </style>
+  </head>
+  <body>
+    <p>Two-finger swipe, two-finger click and drag, or pinch on the pad. Lift, then wait. Wheel events that continue and shrink after the strongest one are trackpad momentum. The coast is what the globe's glide would do with those events.</p>
+    <div id="pad" tabindex="0"></div>
+    <pre id="out">Waiting for a gesture.</pre>
+    <script type="module" src="/src/gestureMomentumProbe.ts"></script>
+  </body>
+</html>
