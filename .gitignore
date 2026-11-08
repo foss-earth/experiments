@@ -2,3 +2,8 @@ node_modules
 dist
 *.local
 .DS_Store
+
+# Downloaded flight data and models, kept out of the repository
+Flightradar24_N722BD_Granular_Data.csv
+N722BD426342df.kml_.zip
+bombardier-learjet-60.zip
