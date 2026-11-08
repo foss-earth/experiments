@@ -5,6 +5,7 @@ const IDLE_MS = 400;
 const pad = document.querySelector<HTMLElement>("#pad");
 const out = document.querySelector<HTMLElement>("#out");
 if (!pad || !out) throw new Error("The gesture pad is missing.");
+const report = out;
 
 let samples: GestureSample[] = [];
 let last: { x: number; y: number } | null = null;
@@ -17,7 +18,7 @@ function stamp(): number {
 function scheduleReport(): void {
   window.clearTimeout(idle);
   idle = window.setTimeout(() => {
-    out.textContent = samples.length === 0 ? "Waiting for a gesture." : formatGestureReport(coastOf(samples));
+    report.textContent = samples.length === 0 ? "Waiting for a gesture." : formatGestureReport(coastOf(samples));
     samples = [];
     last = null;
   }, IDLE_MS);
